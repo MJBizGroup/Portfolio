@@ -1,3 +1,9 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index bf8998ad4ecaf47ad52f71fd68faa719b4b9c748..6a3ca10245b27735b7cb0a1db9a4bc7051e2c054 100644
+--- a/index.html
++++ b/index.html
+@@ -1,68 +1,166 @@
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -198,3 +204,6 @@
    <script src="assets/js/main.js"></script>
  </body>
  </html>
+ 
+EOF
+)
