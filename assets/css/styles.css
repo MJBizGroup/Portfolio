@@ -1,19 +1,24 @@
-
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/assets/css/styles.css b/assets/css/styles.css
+index 944ee95db51000e14a03ad68a6e3ad3a0dfd4fb6..eb30ebd2f65bd7b98c3482063af8258387f5e301 100644
+--- a/assets/css/styles.css
++++ b/assets/css/styles.css
+@@ -1,16 +1,31 @@
  body {
    background-color: #f8f9fc;
  }
  
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-}
-
-.sticky-card {
-  position: sticky;
- top: 88px;
-}
-
++.navbar {
++  position: sticky;
++  top: 0;
++  z-index: 1030;
++}
++
++.sticky-card {
++  position: sticky;
++  top: 88px;
++}
++
  .card-title {
    font-weight: 600;
  }
@@ -26,7 +31,10 @@
  .btn-outline-primary {
    border-width: 2px;
  }
-
-.badge[class*="subtle"] {
-  font-weight: 600;
-}
++
++.badge[class*="subtle"] {
++  font-weight: 600;
++}
+ 
+EOF
+)
